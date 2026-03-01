@@ -23,9 +23,24 @@ let perseJson = JSON.parse(personJson);
 // api check and give data
 
 
-const submitApi = () => {
+const loadData = () => {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
         .then((res) => res.json())
         .then((data) => console.log(data));
 }
 
+
+const postData = () => {
+    const url = "https://jsonplaceholder.typicode.com/posts";
+
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => displayLoad(data))
+
+}
+
+const displayLoad = (posts) => {
+    posts.forEach(post => {
+        console.log(post);
+    });
+}
