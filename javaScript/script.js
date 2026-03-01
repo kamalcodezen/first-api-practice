@@ -30,12 +30,12 @@ const loadData = () => {
 }
 
 
-const postData = () => {
+const checkData = () => {
     const url = "https://jsonplaceholder.typicode.com/posts";
 
     fetch(url)
         .then((res) => res.json())
-        .then((data) => displayLoad(data))
+        .then((jsonData) => displayLoad(jsonData));
 
 }
 
@@ -43,4 +43,4 @@ const displayLoad = (posts) => {
     posts.forEach(post => {
         console.log(post);
     });
-}
+};
