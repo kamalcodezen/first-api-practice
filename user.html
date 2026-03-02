@@ -8,17 +8,35 @@
     <style>
         #users-container {
             max-width: 72rem;
+            margin: 50px auto;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             column-gap: 20px;
-            row-gap: 20px;
+            row-gap: 30px;
         }
 
-        
+        .users-card {
+            border: 2px solid yellow;
+            border-radius: 8px;
+            padding-inline: 20px;
+            text-align: justify;
+            font-weight: 500;
+            height: 100%;
+            box-shadow:
+                0 0 10px #ff005e,
+                0 0 20px #ff005e,
+                0 0 30px #00d4ff;
+            line-height: 10px;
+        }
     </style>
 </head>
 
 <body>
+
+    <h1 style="text-align: center;text-shadow:
+                0 0 10px #ff005e,
+                0 0 20px #ff005e,
+                0 0 30px #00d4ff; ">USER INFO DASHBOARD</h1>
 
     <section id="users-container"></section>
 

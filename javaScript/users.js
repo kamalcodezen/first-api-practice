@@ -27,13 +27,31 @@ const usersDisplay = (posts) => {
     usersContainer.innerHTML = "";
 
     posts.forEach(post => {
-        // console.log(post)
+    
+        // object destructure
+        const { id, name, username, email,address: { street, suite, city, zipcode }, phone, website, company: { name: companyName, catchPhrase, bs }
+        } = post;
+
         const div = document.createElement("div");
         div.innerHTML = `
-        
-     
-
-
+       
+    <div class="users-card">
+        <h3>Id : ${id}</h3>
+        <p>Name : ${name}</p>
+        <p>Username : ${username}</p>
+        <p>Email : ${email}</p>
+        <h3>Address : </h3>
+            <p>Street : ${street}</p>
+            <p>Suite : ${suite}</p>
+            <p>City : ${city}</p>
+            <p>Zipcode : ${zipcode}</p>
+        <p>Phone : ${phone}</p>
+        <p>Website : ${website}</p>
+        <h3>Company :</h3>
+        <p>Name : ${companyName}</p>
+        <p>CatchPhrase: ${catchPhrase}</p>
+        <p>Bs: ${bs}</p>
+    </div>
         `;
 
         usersContainer.appendChild(div);
